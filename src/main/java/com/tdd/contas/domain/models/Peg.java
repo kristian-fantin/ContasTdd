@@ -34,9 +34,11 @@ public class Peg {
     @JoinColumn(name = "PRESTADOR")
     private Prestador prestador;
 
+    @Setter
     @Column(name = "OBSERVACAO")
     private String observacao;
 
+    @Setter
     @Column(name = "STATUS")
     @Enumerated(EnumType.STRING)
     private StatusPeg status;
