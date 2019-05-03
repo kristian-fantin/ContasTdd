@@ -2,6 +2,7 @@ package com.tdd.contas.domain.services;
 
 import com.tdd.contas.domain.models.HistoricoPeg;
 import com.tdd.contas.domain.models.Peg;
+import com.tdd.contas.domain.observers.ObserverPeg;
 import com.tdd.contas.domain.repositories.HistoricoPegRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 
 @Service
-public class HistoricoPegService {
+public class HistoricoPegService implements ObserverPeg {
 
     @Autowired
     private HistoricoPegRepository repository;
@@ -24,5 +25,10 @@ public class HistoricoPegService {
                 .peg(peg)
                 .observacao(observacao)
                 .build();
+    }
+
+    @Override
+    public void update(Peg peg) {
+        save(new Date(), peg, peg.getObservacao());
     }
 }
