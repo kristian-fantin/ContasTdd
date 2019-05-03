@@ -1,0 +1,6 @@
+contas:
+  welcome_message: "Welcome to TDD Medical Account APP"
+
+spring:
+  profiles:
+    active: dev

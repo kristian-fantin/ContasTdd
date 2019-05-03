@@ -1,0 +1,6 @@
+contas:
+  welcome_message: "Welcome to TDD medical Account APP - Test Mode"
+
+spring:
+  profiles:
+    active: test
