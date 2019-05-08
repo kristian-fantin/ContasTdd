@@ -29,7 +29,9 @@ public class SwaggerConfig {
                 .build()
                 .apiInfo(generateApiInfo())
                 .tags(
-                        new Tag("name", "description")
+                        new Tag("harnessController", "Acesso ao Harness"),
+                        new Tag("prestadoresController", "Acesso aos Prestadores")
+
                 );
     }
 

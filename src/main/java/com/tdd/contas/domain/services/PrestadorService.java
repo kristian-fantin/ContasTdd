@@ -6,6 +6,8 @@ import com.tdd.contas.domain.repositories.PrestadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PrestadorService {
 
@@ -21,5 +23,9 @@ public class PrestadorService {
                 .nome(nome)
                 .especialidade(especialidade)
                 .build();
+    }
+
+    public List<Prestador> findAll() {
+        return repository.findAll();
     }
 }

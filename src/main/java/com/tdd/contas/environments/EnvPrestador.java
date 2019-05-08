@@ -15,4 +15,8 @@ public class EnvPrestador {
     public void setUmPrestador() {
         service.save("Prestador A", CLINICO_GERAL);
     }
+
+    public void setPrestadorXyz() {
+        service.save("Prestador XYZ", CLINICO_GERAL);
+    }
 }
